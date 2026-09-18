@@ -3,7 +3,7 @@ import java.util.*;
 
 public class RSAAlgorithm {
     public static int getGCD(int mod, int num) {
-        if (mod == 0) 
+        if (mod == 0)
             return num;
         else
             return getGCD(num % mod, mod);
@@ -20,45 +20,32 @@ public class RSAAlgorithm {
 
         //Finding the valid public key
         for (e = 2; e < primeMul1; e++) {
-            //Here e is public key
             if (getGCD(e, primeMul1) == 1) {
                 break;
             }
         }
 
-        // Printing the public key
         System.out.println("Public key e is = " + e);
 
-        //Calculating the private key
         for (int m = 0; m <= 9; m++) {
-            // get the value of temp
             int temp = 1 + (m * primeMul1);
-
-            //private key
             if (temp % e == 0) {
                 d = temp / e;
                 break;
             }
-
         }
+
         System.out.println("d is: " + d);
         double cipher;
         BigInteger d_message;
 
-        //getting the cipher text
         cipher = (Math.pow(message, e)) % primeMul;
         System.out.println("Cipher Text is: " + cipher);
 
-        //Int to BigInteger
         BigInteger bigN = BigInteger.valueOf(primeMul);
-
-        //Float to bigInt
         BigInteger bigC = BigDecimal.valueOf(cipher).toBigInteger();
-
-        // decrypting the message
         d_message = (bigC.pow(d)).mod(bigN);
 
-        //print the decrypted message
         System.out.println("Decrypted text is: " + d_message);
     }
 }
