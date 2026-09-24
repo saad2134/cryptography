@@ -2,7 +2,7 @@
 
 ## Overview
 
-A small collection of Java implementations for common cryptographic algorithms.
+A small collection of implementations for cryptographic algorithms.
 
 ## Programs
 
