@@ -1,12 +1,14 @@
 # Cryptography
 
-A small collection of Java implementations for common cryptographic algorithms.
+1. Overview
 
-## Programs
+   A small collection of Java implementations for common cryptographic algorithms.
 
-All source files are stored in the `programs/` directory:
+2. Programs
 
-- [Blowfish](programs/Blowfish.java)
-- [DES](programs/DES.java)
-- [RC4 Encryption](programs/RC4Encryption.java)
-- [RSA Algorithm](programs/RSAAlgorithm.java)
+   The source files are stored in the `programs/` directory:
+
+   1. [Blowfish](programs/Blowfish.java)
+   2. [DES](programs/DES.java)
+   3. [RC4 Encryption](programs/RC4Encryption.java)
+   4. [RSA Algorithm](programs/RSAAlgorithm.java)
